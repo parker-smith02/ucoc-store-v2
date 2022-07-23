@@ -3,6 +3,7 @@ Running the project:
   - Open a terminal in the UcocStore directory
   - Run python manage.py runserer
   - Open another terminal in the frontend directory
+  - Run npm install if it is the first time running the project or if new dependencies were added
   - Run npm run dev
   - Visit the project with localhost:8000
 
