@@ -6,23 +6,23 @@ class Address(models.Model):
     street_address = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
-    zipcode = models.IntegerField(max_digits=5)
+    zipcode = models.IntegerField()
 
 
 class User(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
-    phone_number = models.IntegerField(max_digits=10, blank=False)
-    address = models.ForeignKey(
-        Address, on_delete=models.SET_NULL, null=True, blank=True)
-    user_id = models.IntegerField(max_digits=10)
+    phone_number = models.IntegerField(blank=False)
+    user_id = models.IntegerField()
+    address = models.OneToOneField(
+        Address, null=True, on_delete=models.SET_NULL, blank=True)
 
     def __str__(self):
         return self.name
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.SET_NULL)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     order_date = models.DateField(auto_now=True)
 
     def get_total(self):
@@ -34,9 +34,10 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.SET_NULL)
-    product = models.OneToOneField('Product', on_delete=models.SET_NULL)
-    quantity = models.IntegerField(max_digits=2)
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
+    product = models.OneToOneField(
+        'Product', on_delete=models.SET_NULL, null=True)
+    quantity = models.IntegerField()
 
     def get_total_item_price(self):
         return self.product.price * self.quantity
@@ -60,11 +61,6 @@ class Product(models.Model):
 class RentalItem(models.Model):
     item = models.CharField(max_length=200)
     description = models.CharField(max_length=200, null=True)
-    style = CharField(max_length=200, null=True)
-    image = models.ImageField(null=True, null=True)
-    number_avaliable = models.IntegerField(max_digits=3)
-
-
-class OrderItem(models.Model):
-    product = models.ForeignKey(
-        Product, on_delete=models.SET_NULL, blank=True, null=True)
+    style = CharField(max_length=200)
+    image = models.ImageField(null=True)
+    number_avaliable = models.IntegerField()
