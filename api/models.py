@@ -37,7 +37,7 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     product = models.OneToOneField(
         'Product', on_delete=models.SET_NULL, null=True)
-    quantity = models.IntegerField()
+    quantity = models.IntegerField(null=True)
 
     def get_total_item_price(self):
         return self.product.price * self.quantity

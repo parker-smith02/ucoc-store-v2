@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
+import Navbar from "./shared components/navbar";
+import ReactDOM from "react-dom";
 
 const App = () => {
-  return <h1>Hello World!</h1>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
-export default App;
-
-const appDiv = document.getElementById("app");
-render(<App />, appDiv);
+ReactDOM.render(<App />, document.getElementById("app"));
