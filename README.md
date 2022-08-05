@@ -1,17 +1,25 @@
-Running the project:
 
-* Pull from the remote repository to ensure you have most recent changes
-* Open a terminal in the UcocStore directory
-* Run ```python manage.py runserver```
-* Open another terminal in the UcocStore directory
-* Run ```npm install``` if it is the first time running the project
-* Run ```npm run dev```
-* Visit the project with localhost:8000
+# Django-React-Tailwindcss Boilerplate
+Django-React-Tailwindcss Boilerplate is Django project with React as frontend served by Django. Tailwind css has been used to style the components.
 
-Development Workflow:
+Live Demo: [https://nepdr.pythonanywhere.com/](https://nepdr.pythonanywhere.com/)
 
-- Pull from remote repo
-- make a new branch with the title of the feature you are working on
-- Switch into the new branch and write your code
-- When development is finished, commit changes and push to the new branch on github
-- Open a pull request to merge the branch
+## Install Python Packages Required For Project
+
+`pip3 install -r requirements.txt`
+
+## Install Node Modules
+
+`npm install`
+
+## Build The Project
+
+`npm run build`
+
+If you want to see live changes while building the project run `npm run dev` which will keep watching the changes. Whenever you save the project refresh the browser to see the changes.
+
+## Run Django Server
+
+`python manage.py runserver`
+
+

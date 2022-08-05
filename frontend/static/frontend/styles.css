@@ -533,8 +533,16 @@ video {
   border-color: currentColor;
 }
 
+.flex {
+  display: flex;
+}
+
 .table {
   display: table;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 @-webkit-keyframes spin {
@@ -603,6 +611,11 @@ video {
   }
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -625,6 +638,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {

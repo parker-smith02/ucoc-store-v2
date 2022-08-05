@@ -1,11 +1,14 @@
-import React, { Component } from "react";
-import Navbar from "./shared components/navbar";
+import React from "react";
 import ReactDOM from "react-dom";
+import topBg from "../images/topBg.jpg";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
+    <div
+      className="flex h-screen text-xl md:text-lg"
+      style={{ backgroundImage: `url(${topBg})` }}
+    >
+      <p className="text-3xl">testing</p>
     </div>
   );
 };
