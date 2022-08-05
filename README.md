@@ -1,14 +1,16 @@
 Running the project:
+====================
 
 * Pull from the remote repository to ensure you have most recent changes
 * Open a terminal in the UcocStore directory
-* Run code(python manage.py runserer)
+* Run ```python manage.py runserer```
 * Open another terminal in the UcocStore directory
-* Run npm install if it is the first time running the project or if new dependencies were added 
-* Run npm run dev 
+* Run ```npm install``` if it is the first time running the project or if new dependencies were added 
+* Run ```npm run dev```
 * Visit the project with localhost:8000 
 
 Development Workflow:
+=====================
 
 * Pull from remote repo make a new branch with the title of the feature you are working on 
 * Switch into the new branch and write your code 
