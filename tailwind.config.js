@@ -1,24 +1,23 @@
 module.exports = {
   purge: {
     enabled: true,
-    content: [
-      './frontend/src/**/*.js',
-      './frontend/src/**/*.jsx'
-    ],
+    content: ["./frontend/src/**/*.js", "./frontend/src/**/*.jsx"],
     options: {
-      whitelist: []
-    }
+      whitelist: [],
+    },
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      django: '#092e20',
-      react: '#61DBFB',
-      tailwind: '#00b4b6'
-    }
+      backGround: "#17102a",
+      text: "#b08696",
+    },
+    fontFamily: {
+      body: ["Oswald"],
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

@@ -1,6 +1,10 @@
 /*!*********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./frontend/src/styles.css ***!
   \*********************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./frontend/src/styles.css (1) ***!
+  \*************************************************************************************************************************/
 /*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -404,11 +408,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   color: #a1a1aa;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  color: #a1a1aa;
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -529,103 +528,127 @@ video {
  * Ensure the default browser behavior of the `hidden` attribute.
  */
 
-*, ::before, ::after {
+*, ::before, ::after{
   border-color: currentColor;
 }
 
-.flex {
+.z-50{
+  z-index: 50;
+}
+
+.block{
+  display: block;
+}
+
+.flex{
   display: flex;
 }
 
-.table {
+.table{
   display: table;
 }
 
-.h-screen {
+.h-screen{
   height: 100vh;
 }
 
-@-webkit-keyframes spin {
-  to {
+.w-60{
+  width: 15rem;
+}
+
+.w-full{
+  width: 100%;
+}
+
+@-webkit-keyframes spin{
+  to{
     transform: rotate(360deg);
   }
 }
 
-@keyframes spin {
-  to {
+@keyframes spin{
+  to{
     transform: rotate(360deg);
   }
 }
 
-@-webkit-keyframes ping {
-  75%, 100% {
+@-webkit-keyframes ping{
+  75%, 100%{
     transform: scale(2);
     opacity: 0;
   }
 }
 
-@keyframes ping {
-  75%, 100% {
+@keyframes ping{
+  75%, 100%{
     transform: scale(2);
     opacity: 0;
   }
 }
 
-@-webkit-keyframes pulse {
-  50% {
+@-webkit-keyframes pulse{
+  50%{
     opacity: .5;
   }
 }
 
-@keyframes pulse {
-  50% {
+@keyframes pulse{
+  50%{
     opacity: .5;
   }
 }
 
-@-webkit-keyframes bounce {
-  0%, 100% {
+@-webkit-keyframes bounce{
+  0%, 100%{
     transform: translateY(-25%);
     -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
             animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
-  50% {
+  50%{
     transform: none;
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
-@keyframes bounce {
-  0%, 100% {
+@keyframes bounce{
+  0%, 100%{
     transform: translateY(-25%);
     -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
             animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
-  50% {
+  50%{
     transform: none;
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.bg-backGround{
+  --tw-bg-opacity: 1;
+  background-color: rgba(23, 16, 42, var(--tw-bg-opacity));
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.p-2{
+  padding: 0.5rem;
 }
 
-*, ::before, ::after {
+.font-body{
+  font-family: Oswald;
+}
+
+.text-text{
+  --tw-text-opacity: 1;
+  color: rgba(176, 134, 150, var(--tw-text-opacity));
+}
+
+*, ::before, ::after{
   --tw-shadow: 0 0 #0000;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
@@ -634,21 +657,17 @@ video {
   --tw-ring-shadow: 0 0 #0000;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px){
 }
 
-@media (min-width: 768px) {
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
+@media (min-width: 768px){
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px){
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1536px){
 }
