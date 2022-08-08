@@ -14,7 +14,11 @@ const Shop = () => {
         .then((response) => {
           const data = response.data;
           console.log(data);
-          setProducts(data);
+          const merch = data.filter((product) => product.category === "mr");
+          setProducts(merch);
+          setDataReady(true);
+        })
+        .catch((err) => {
           setDataReady(true);
         });
     }
@@ -22,8 +26,8 @@ const Shop = () => {
 
   return (
     <div className="bg-backGround block w-full shop-container">
-      <h2 className="">Merch</h2>
-      <div className="flex products-wrapper">
+      <h1 className="text-3xl text-center pb-16">Merch</h1>
+      <div className="flex place-content-center products-wrapper">
         {products.map((product) => (
           <ProductCard product={product} />
         ))}

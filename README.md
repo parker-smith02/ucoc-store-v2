@@ -1,6 +1,7 @@
 Running the project:
 ====================
 
+* If it is the first time running the project configure your python environment and run ```pip install django```, ```pip install djangorestframework```, and ```pip install Pillow```
 * Pull from the remote repository to ensure you have most recent changes
 * Open a terminal in the UcocStore directory
 * Run ```python manage.py runserer```
