@@ -1,10 +1,10 @@
 import React from "react";
 
 const ProductCard = (product) => {
-  console.log(product);
+  product = product.product;
   return (
-    <div className="w-60 p-2 text-white">
-      <p>{product.name}</p>
+    <div className="w-60 p-4 m-6 flex rounded-lg text-darkText bg-lightGray product-wrapper">
+      <h3>{product.name}</h3>
     </div>
   );
 };
