@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import LandingPage from "./LandingPage";
+import Navbar from "./Navbar";
 import Shop from "./shop";
 
 const App = () => {
