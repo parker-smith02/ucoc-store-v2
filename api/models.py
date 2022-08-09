@@ -47,6 +47,10 @@ class OrderItem(models.Model):
         return self.get_total_item_price * discount
 
 
+def upload_path(instance, filename):
+    return 'images/{filename}'.format(filename=filename)
+
+
 class Product(models.Model):
 
     CATEGORY_CHOICES = [
@@ -54,14 +58,11 @@ class Product(models.Model):
         ('mr', "Merch")
     ]
 
-    def upload_path(self, instance, filename):
-        return '/'.join(['products', str(instance.name), filename])
-
     name = models.CharField(max_length=200, null=True)
     description = models.CharField(max_length=200, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     delivered = models.BooleanField(default=False, null=True, blank=False)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to=upload_path)
     size = models.CharField(max_length=200, null=True)
     color = models.CharField(max_length=200, null=True)
     discount = models.DecimalField(max_digits=2, decimal_places=2)
