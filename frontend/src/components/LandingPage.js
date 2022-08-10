@@ -14,9 +14,6 @@ const LandingPage = () => {
     <div className="bg-backGround w-full h-screen landing-page">
       <div className="parallax-container">
         <Parallax pages={1.5} className="parallax-background">
-          <ParallaxLayer sticky={{ start: 0, end: 1.5 }}>
-            <Navbar />
-          </ParallaxLayer>
           <ParallaxLayer
             speed={0.1}
             style={{ backgroundImage: `url(${im6})`, backgroundSize: "cover" }}
