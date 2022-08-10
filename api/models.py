@@ -58,6 +58,9 @@ class Product(models.Model):
         ('mr', "Merch")
     ]
 
+    def upload_path(self, instance, filename):
+        return '/'.join(['products', str(instance.name), filename])
+
     name = models.CharField(max_length=200, null=True)
     description = models.CharField(max_length=200, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
@@ -66,6 +69,8 @@ class Product(models.Model):
     size = models.CharField(max_length=200, null=True)
     color = models.CharField(max_length=200, null=True)
     discount = models.DecimalField(max_digits=2, decimal_places=2)
+    category = models.CharField(
+        max_length=2, choices=CATEGORY_CHOICES, default='mr')
     category = models.CharField(
         max_length=2, choices=CATEGORY_CHOICES, default='mr')
 
