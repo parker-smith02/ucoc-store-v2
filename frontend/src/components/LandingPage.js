@@ -7,7 +7,6 @@ import im5 from "../images/landingParallax/5.png";
 import im6 from "../images/landingParallax/6.png";
 import Shop from "./shop/Shop";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Navbar from "./Navbar";
 
 const LandingPage = () => {
   return (
