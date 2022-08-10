@@ -537,11 +537,6 @@ video {
   position: relative;
 }
 
-.sticky{
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .z-50{
   z-index: 50;
 }
@@ -737,10 +732,6 @@ video {
   text-align: center;
 }
 
-.font-body{
-  font-family: Oswald;
-}
-
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -754,11 +745,6 @@ video {
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-text{
-  --tw-text-opacity: 1;
-  color: rgba(176, 134, 150, var(--tw-text-opacity));
 }
 
 .text-darkText{
