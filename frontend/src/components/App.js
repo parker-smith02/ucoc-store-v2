@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="app text-text bg-backGround">
       <Router>
-        <Parallax pages={1.5} className="parallax-background">
+        <Parallax pages={1.5} className="parallax-background bg-backGround">
           <ParallaxLayer sticky={{ start: 0, end: 1.5 }}>
             <Navbar />
           </ParallaxLayer>
