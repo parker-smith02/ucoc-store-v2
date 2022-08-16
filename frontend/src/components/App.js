@@ -8,6 +8,7 @@ import GroupBuys from "./groupbuys/GroupBuys";
 import RentGear from "./rentgear/RentGear";
 import RequestATrip from "./requestatrip/RequestATrip";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ProductDetailedView from "./shop/ProductDetailedView";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/groupbuys" element={<GroupBuys />} />
             <Route path="/rentgear" element={<RentGear />} />
             <Route path="/requestatrip" element={<RequestATrip />} />
+            <Route path="/product" element={<ProductDetailedView />} />
           </Routes>
         </Parallax>
       </Router>

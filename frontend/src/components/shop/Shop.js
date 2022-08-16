@@ -13,7 +13,6 @@ const Shop = () => {
         .get(`${Constants.API_BASE_URL}/getProducts/`, {})
         .then((response) => {
           const data = response.data;
-          console.log(data);
           const merch = data.filter((product) => product.category === "mr");
           setProducts(merch);
           setDataReady(true);
