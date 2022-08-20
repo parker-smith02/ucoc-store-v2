@@ -6,7 +6,7 @@ const Navbar = () => {
   const spanClasses =
     "px-4 pt-1.5 mx-3 hover:bg-text hover:text-darkText duration-200 text-xl rounded-xl h-12";
   return (
-    <div className="navbar-container pt-2 w-full h-16 flex justify-between shadow-md bg-backGround">
+    <div className="navbar-container pt-2 w-full fixed h-16 flex justify-between z-50 shadow-md bg-backGround">
       <div className="navbar-left flex">
         <span className={spanClasses}>
           <Link to="/shop">Shop</Link>

@@ -14,6 +14,8 @@ module.exports = {
         text: "#b08696",
         lightGray: "#cbd5e1",
         darkText: "#0f172a",
+        black: "#000000",
+        darkGray: "#1a1a1a",
       },
       fontFamily: {
         body: ["Oswald"],

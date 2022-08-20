@@ -6,5 +6,6 @@ urlpatterns = [
     path('getUserData/<int:id>/', views.getSpecificUser),
     path('getProducts/', views.getProducts),
     path('uploadImage', views.AdminImageUpload),
+    path('getProductById/<int:id>', views.getProductById),
 
 ]

@@ -42,7 +42,7 @@ const LandingPage = () => {
         speed={1.5}
         style={{ backgroundImage: `url(${im1})`, backgroundSize: "cover" }}
       ></ParallaxLayer>
-      <ParallaxLayer className="Shop-layer flex z-50" offset={0.95} speed={1.5}>
+      <ParallaxLayer className="Shop-layer flex z-30" offset={0.95} speed={1.5}>
         <Shop />
       </ParallaxLayer>
     </div>

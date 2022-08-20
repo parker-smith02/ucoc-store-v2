@@ -42,6 +42,16 @@ def getRentalItems(request):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def getProductById(request, id):
+    try:
+        product = Product.objects.get(pk=id)
+    except Product.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    serializer = ProductSerializer(product)
+    return Response(serializer.data)
+
+
 class AdminImageUpload(APIView):
     parser_classes = [MultiPartParser, FormParser]
 

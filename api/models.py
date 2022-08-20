@@ -58,8 +58,10 @@ class Product(models.Model):
         ('mr', "Merch")
     ]
 
-    def upload_path(self, instance, filename):
-        return '/'.join(['products', str(instance.name), filename])
+    def upload_path(self, instance, filename=None):
+        if filename is None:
+            filename = instance
+        return '/'.join(['products', str(instance), filename])
 
     name = models.CharField(max_length=200, null=True)
     description = models.CharField(max_length=200, null=True)
@@ -73,6 +75,9 @@ class Product(models.Model):
         max_length=2, choices=CATEGORY_CHOICES, default='mr')
     category = models.CharField(
         max_length=2, choices=CATEGORY_CHOICES, default='mr')
+
+    def __str__(self):
+        return self.name
 
 
 class RentalItem(models.Model):

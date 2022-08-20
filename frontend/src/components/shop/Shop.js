@@ -24,12 +24,14 @@ const Shop = () => {
   }, [dataReady]);
 
   return (
-    <div className="bg-backGround block w-full shop-container">
+    <div className="bg-backGround block justify-center w-full shop-container">
       <h1 className="text-3xl text-center pb-16">Merch</h1>
-      <div className="flex place-content-center products-wrapper">
-        {products.map((product) => (
-          <ProductCard product={product} />
-        ))}
+      <div className="grid-wrapper w-full flex justify-center">
+        <div className="w-4/6 grid grid-cols-3 gap-8 place-content-center products-wrapper">
+          {products.map((product) => (
+            <ProductCard product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
