@@ -66,7 +66,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     delivered = models.BooleanField(default=False, null=True, blank=False)
     image = models.ImageField(null=True, blank=True, upload_to=upload_path)
-    size = models.CharField(max_length=200, null=True)
+    sizes = models.CharField(max_length=200, null=True, blank=True)
     color = models.CharField(max_length=200, null=True)
     discount = models.DecimalField(max_digits=2, decimal_places=2)
     category = models.CharField(
